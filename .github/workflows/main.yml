@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1️⃣ Checkout repo
+    # 1️⃣ Checkout code
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # 2️⃣ Setup Arduino CLI
+    # 2️⃣ Setup Arduino CLI (pinned stable version)
     - name: Setup Arduino CLI
       uses: arduino/setup-arduino-cli@v2
       with:
-        version: latest
+        version: 0.33.0
 
     # 3️⃣ Update index and install ESP8266 core
     - name: Install ESP8266 core
